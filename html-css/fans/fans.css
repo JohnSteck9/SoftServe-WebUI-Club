@@ -1,0 +1,46 @@
+header h1 {
+  margin-top: 0;
+  padding-top: 100px;
+}
+
+section article.fans {
+  margin-top: 20px;
+}
+section article.fans .article__text {
+  line-height: 1.5;
+  font-size: 16px;
+}
+section article.fans .article__text_info {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+section article.fans .article__text_info .article__date {
+  font-size: 16px;
+}
+section article.fans .article__text_info .article__author {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+section.send-comment form {
+  margin-top: 20px;
+}
+section.send-comment form label {
+  display: flex;
+  align-items: flex-end;
+}
+section.send-comment form label textarea {
+  border: 1px solid #888;
+  resize: none;
+  padding: 8px;
+}
+section.send-comment form label input {
+  background-color: #d05f1a;
+  border-radius: 4px;
+  padding: 10px 34px;
+  border: 1px solid black;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=fans.css.map */

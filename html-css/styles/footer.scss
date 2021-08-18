@@ -1,0 +1,22 @@
+footer {
+  margin-top: 50px;
+  padding: 10px 0 0 0;
+  background-color: #000000;
+  color: #fff;
+
+  > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  p {
+    display: inline-block;
+  }
+
+  a {
+    .logo {
+      height: 50px;
+    }
+  }
+}

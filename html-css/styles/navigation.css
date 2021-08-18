@@ -1,0 +1,79 @@
+nav {
+  width: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+nav .container {
+  padding-top: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+nav .container > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav .container > ul > li {
+  display: block;
+  margin-right: 20px;
+  transition: all 2s ease;
+}
+nav .container > ul > li:hover > ul, nav .container > ul > li:focus-within > ul, nav .container > ul > li .dropdown-menu:hover {
+  display: block;
+}
+nav .container > ul > li.dropdown-menu {
+  position: relative;
+}
+nav .container > ul > li.dropdown-menu:hover .dropdown {
+  display: block;
+}
+nav .container > ul > li.dropdown-menu .dropdown {
+  display: none;
+  position: absolute;
+}
+nav .container > ul > li.dropdown-menu .dropdown li {
+  display: block;
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.71);
+}
+nav .container > ul > li.dropdown-menu .dropdown li:first-child {
+  margin-top: 1px;
+}
+nav .container > ul > li.dropdown-menu .dropdown li:hover {
+  background-color: red;
+}
+nav .container > ul > li.dropdown-menu .dropdown li:hover a {
+  color: #000;
+}
+nav .container > ul > li.dropdown-menu .dropdown li:hover:after {
+  content: "";
+  position: absolute;
+  margin-top: -51px;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-top: 26px solid transparent;
+  border-left: 30px solid red;
+  border-bottom: 26px solid transparent;
+}
+nav .container > ul > li a {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  padding: 16px 12px;
+}
+nav .container > ul > li a > span {
+  font-size: 12px;
+}
+nav .container > ul > li a.active {
+  color: #EF0000;
+}
+nav .container > ul > li a:hover {
+  color: #d05f1a;
+}
+nav .container a .logo {
+  height: 50px;
+}
+
+/*# sourceMappingURL=navigation.css.map */

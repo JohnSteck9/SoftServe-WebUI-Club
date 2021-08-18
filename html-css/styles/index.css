@@ -6,83 +6,6 @@ header {
 header h3 {
   padding-top: 260px;
 }
-header nav {
-  width: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-header nav .container {
-  padding-top: 8px;
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-header nav .container > ul {
-  display: flex;
-  flex-wrap: wrap;
-}
-header nav .container > ul > li {
-  display: block;
-  margin-right: 20px;
-  transition: all 2s ease;
-}
-header nav .container > ul > li:hover > ul, header nav .container > ul > li:focus-within > ul, header nav .container > ul > li .dropdown-menu:hover {
-  display: block;
-}
-header nav .container > ul > li.dropdown-menu {
-  position: relative;
-}
-header nav .container > ul > li.dropdown-menu:hover .dropdown {
-  display: block;
-}
-header nav .container > ul > li.dropdown-menu .dropdown {
-  display: none;
-  position: absolute;
-}
-header nav .container > ul > li.dropdown-menu .dropdown li {
-  display: block;
-  width: 220px;
-  background-color: rgba(0, 0, 0, 0.71);
-}
-header nav .container > ul > li.dropdown-menu .dropdown li:first-child {
-  margin-top: 1px;
-}
-header nav .container > ul > li.dropdown-menu .dropdown li:hover {
-  background-color: red;
-}
-header nav .container > ul > li.dropdown-menu .dropdown li:hover a {
-  color: #000;
-}
-header nav .container > ul > li.dropdown-menu .dropdown li:hover:after {
-  content: "";
-  position: absolute;
-  margin-top: -51px;
-  left: 100%;
-  width: 0;
-  height: 0;
-  border-top: 26px solid transparent;
-  border-left: 30px solid red;
-  border-bottom: 26px solid transparent;
-}
-header nav .container > ul > li a {
-  display: block;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  padding: 16px 12px;
-}
-header nav .container > ul > li a > span {
-  font-size: 12px;
-}
-header nav .container > ul > li a.active {
-  color: #EF0000;
-}
-header nav .container > ul > li a:hover {
-  color: #d05f1a;
-}
-header a .logo {
-  height: 50px;
-}
 
 article.history {
   text-align: center;
@@ -106,24 +29,6 @@ article.victory p {
   padding: 10px 0;
   width: 70%;
   margin: 0 auto;
-}
-
-footer {
-  margin-top: 50px;
-  padding: 10px 0;
-  background-color: #000000;
-  color: #fff;
-}
-footer > .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-footer p {
-  display: inline-block;
-}
-footer a .logo {
-  height: 50px;
 }
 
 /*# sourceMappingURL=index.css.map */
