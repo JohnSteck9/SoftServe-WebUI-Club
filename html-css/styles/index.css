@@ -12,40 +12,40 @@ header nav {
   background-color: rgba(0, 0, 0, 0.8);
 }
 header nav .container {
-  padding: 8px 0;
+  padding-top: 8px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
+header nav .container > ul {
+  display: flex;
+  flex-wrap: wrap;
+}
 header nav .container > ul > li {
+  display: block;
   margin-right: 20px;
-  display: inline-block;
   transition: all 2s ease;
+}
+header nav .container > ul > li:hover > ul, header nav .container > ul > li:focus-within > ul, header nav .container > ul > li .dropdown-menu:hover {
+  display: block;
 }
 header nav .container > ul > li.dropdown-menu {
   position: relative;
-  transition: all 2s ease;
 }
 header nav .container > ul > li.dropdown-menu:hover .dropdown {
   display: block;
 }
 header nav .container > ul > li.dropdown-menu .dropdown {
-  margin-top: 12px;
-  position: absolute;
   display: none;
-  transition: all 2s ease;
+  position: absolute;
 }
 header nav .container > ul > li.dropdown-menu .dropdown li {
-  padding: 16px 0;
   display: block;
   width: 220px;
   background-color: rgba(0, 0, 0, 0.71);
 }
-header nav .container > ul > li.dropdown-menu .dropdown li a {
-  display: block;
-}
 header nav .container > ul > li.dropdown-menu .dropdown li:first-child {
-  margin-top: 14px;
+  margin-top: 1px;
 }
 header nav .container > ul > li.dropdown-menu .dropdown li:hover {
   background-color: red;
@@ -56,20 +56,20 @@ header nav .container > ul > li.dropdown-menu .dropdown li:hover a {
 header nav .container > ul > li.dropdown-menu .dropdown li:hover:after {
   content: "";
   position: absolute;
-  margin-top: -65.8px;
+  margin-top: -51px;
   left: 100%;
   width: 0;
   height: 0;
-  border-top: 41px solid transparent;
-  border-left: 50px solid red;
-  border-bottom: 41px solid transparent;
+  border-top: 26px solid transparent;
+  border-left: 30px solid red;
+  border-bottom: 26px solid transparent;
 }
 header nav .container > ul > li a {
+  display: block;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
-  padding: 6px 12px;
-  margin: 10px 0;
+  padding: 16px 12px;
 }
 header nav .container > ul > li a > span {
   font-size: 12px;
