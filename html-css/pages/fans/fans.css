@@ -4,7 +4,8 @@ header h1 {
 }
 
 section article.fans {
-  margin-top: 20px;
+  margin: 20px auto;
+  transition: all 1s ease;
 }
 section article.fans .article__text {
   line-height: 1.5;
@@ -24,7 +25,7 @@ section article.fans .article__text_info .article__author {
 }
 
 section.send-comment form {
-  margin-top: 20px;
+  margin: 20px auto;
 }
 section.send-comment form label {
   display: flex;
@@ -41,6 +42,17 @@ section.send-comment form label input {
   padding: 10px 34px;
   border: 1px solid black;
   margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+  article.send-comment form label {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+  }
+  article.send-comment form label input {
+    margin: 20px;
+  }
 }
 
 /*# sourceMappingURL=fans.css.map */

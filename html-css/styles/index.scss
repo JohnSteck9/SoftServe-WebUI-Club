@@ -1,7 +1,42 @@
+
+
+
 header {
   background: #000 url('../images/bg.jpg') no-repeat center top / cover;
   height: 100vh;
   color: #fff;
+
+
+  .text-fill {
+    background-color: #ccc;
+    text-transform: uppercase;
+    position: relative;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+
+
+    &:before {
+      content: attr(data-title);
+      background: linear-gradient(#9f40b6, #3a3ad3);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 0;
+      transition: all 1s ease;
+      color: transparent;
+      -webkit-background-clip: text;
+      -o-background-clip: text;
+      background-clip: text;
+    }
+
+    &:hover:before {
+      width: 100%;
+    }
+  }
+h1 {}
 
   h3 {
     padding-top: 260px;
@@ -16,13 +51,17 @@ article.history {
   p {
     text-align: left;
     padding: 10px 0;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
 
   img {
     width: 60%;
     margin: 20px 0;
+    transition: all 1s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
 }
@@ -33,7 +72,28 @@ article.victory {
 
   p {
     padding: 10px 0;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
   }
+}
+
+@media (max-width: 768px) {
+  header h3 {
+    padding-top: 180px;
+  }
+  article.history p, article.victory p {
+    width: 90%;
+  }
+  article.history img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+
+  h1 {
+    font-size: 42px;
+
+  }
+
 }

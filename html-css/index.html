@@ -19,67 +19,82 @@
 <header>
     <nav>
         <div class="container">
+            <label id="hamburger__checkbox_label" for="hamburger__checkbox"></label>
+            <input type="checkbox" id="hamburger__checkbox" name="hamburger checkbox">
+            <div class="hamburger__block">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
             <ul>
                 <li><a href="index.html" class="active">Main</a></li>
-                <li class="dropdown-menu">
-                    <a href="pages/matches/matches.html">Matches <span>ᐁ</span></a>
+                <li class="dropdown__list">
+                    <p class="dropdown__title">Matches <span>ᐁ</span></p>
                     <ul class="dropdown">
-                        <li><a href="pages/matches/calendar_of_matches/calendar_of_matches.html">Calendar of matches</a></li>
+                        <li><a href="pages/matches/calendar_of_matches/calendar_of_matches.html">Calendar of matches</a>
+                        </li>
                         <li><a href="pages/matches/next_game/next_game.html">Next game</a></li>
                         <li><a href="pages/matches/ratings/ratings.html">Ratings</a></li>
                     </ul>
                 </li>
-
                 <li><a href="pages/news/news.html">News</a></li>
                 <li><a href="pages/fans/fans.html">Fans</a></li>
                 <li><a href="pages/contacts/contacts.html">Contacts</a></li>
                 <li><a href="pages/admin/admin.html">Admin</a></li>
             </ul>
-            <a href="index.html"><img src="images/F1.png" alt="f1 logo" class="logo"></a>
 
+            <a class="logo__link" href="index.html"><img class="logo" src="images/F1.png" alt="f1 logo"></a>
         </div>
     </nav>
+
     <div class="container">
         <h3>DRIVERS / HALL OF FAME</h3>
-        <h1>Michael Schumacher</h1>
+        <h1 data-title="Michael Schumacher" class="text-fill">Michael Schumacher</h1>
     </div>
+
 </header>
 
-<article class="history container">
-    <h2>History</h2>
-    <p>
-        Since the Formula One World Drivers' Championship began in 1950 the title has been won by 32 different drivers,
-        15 of whom won more than one championship. Of the multiple champions the most prolific was Juan Manuel Fangio,
-        whose record of five titles stood for five decades until it was eclipsed by the most successful driver in the
-        sport's history.
-    </p>
-    <p>
-        Seven times a champion, Michael Schumacher also holds nearly every scoring record in the book
-        by a considerable margin. Though his ethics were sometimes questioned, as was his decision to make a comeback
-        after retiring, his sheer dominance when in his prime is beyond doubt...
-    </p>
-    <img src="images/love.jpg" alt="fans">
+<article class="history">
+    <div class="container">
+        <h2>History</h2>
+        <p>
+            Since the Formula One World Drivers' Championship began in 1950 the title has been won by 32 different drivers,
+            15 of whom won more than one championship. Of the multiple champions the most prolific was Juan Manuel Fangio,
+            whose record of five titles stood for five decades until it was eclipsed by the most successful driver in the
+            sport's history.
+        </p>
+        <p>
+            Seven times a champion, Michael Schumacher also holds nearly every scoring record in the book
+            by a considerable margin. Though his ethics were sometimes questioned, as was his decision to make a comeback
+            after retiring, his sheer dominance when in his prime is beyond doubt...
+        </p>
+        <img src="images/love.jpg" alt="fans">
+    </div>
+
 </article>
 
-<article class="victory container">
-    <h2>Last Victory</h2>
-    <p>
-        Michael Schumacher set a record for the longest gap between first and last wins with what would prove to be his
-        last Formula One victory in Shanghai on October 1, 2006.
-    </p>
-    <p>
-        That record has since been passed – Kimi Raikkonen did so at the 2014 US Grand Prix, nearly 15 years after his
-        first win in Malaysia in 2003, eclipsing Schumacher’s 14-year gap between Belgium in 1992 and China in 2006.
-        Raikkonen has not won since, by the way.
-    </p>
-    <p>
-        A more interesting record is that Schumacher’s win in Shanghai was his 91st in Formula One. It is a record that
-        is soon expected to be broken by British Mercedes driver Lewis Hamilton, who sits on 90 wins.
-    </p>
-    <p>
-        It is such a feat that Netflix were with Hamilton at Sochi at the last Grand Prix, where he was given two
-        penalties and finished on the podium instead of being the race winner.
-    </p>
+<article class="victory">
+    <div class="container">
+        <h2>Last Victory</h2>
+        <p>
+            Michael Schumacher set a record for the longest gap between first and last wins with what would prove to be his
+            last Formula One victory in Shanghai on October 1, 2006.
+        </p>
+        <p>
+            That record has since been passed – Kimi Raikkonen did so at the 2014 US Grand Prix, nearly 15 years after his
+            first win in Malaysia in 2003, eclipsing Schumacher’s 14-year gap between Belgium in 1992 and China in 2006.
+            Raikkonen has not won since, by the way.
+        </p>
+        <p>
+            A more interesting record is that Schumacher’s win in Shanghai was his 91st in Formula One. It is a record that
+            is soon expected to be broken by British Mercedes driver Lewis Hamilton, who sits on 90 wins.
+        </p>
+        <p>
+            It is such a feat that Netflix were with Hamilton at Sochi at the last Grand Prix, where he was given two
+            penalties and finished on the podium instead of being the race winner.
+        </p>
+    </div>
 </article>
 
 <footer>

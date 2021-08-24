@@ -15,8 +15,13 @@ footer {
   }
 
   a {
+
     .logo {
+      transition: all 1s ease;
       height: 50px;
+    }
+    :hover {
+      transform: translateX(100%);
     }
   }
 }

@@ -1,3 +1,23 @@
+/* Double-sized Checkboxes */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+:root {
+  --orange: #d05f1a;
+  --red: red;
+  --red-active: #EF0000;
+}
+
 nav {
   width: 100%;
   position: fixed;
@@ -8,6 +28,16 @@ nav .container {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  position: relative;
+}
+nav .container #hamburger__checkbox_label {
+  position: absolute;
+}
+nav .container #hamburger__checkbox {
+  display: none;
+}
+nav .container .hamburger__block {
+  display: none;
 }
 nav .container > ul {
   display: flex;
@@ -18,34 +48,32 @@ nav .container > ul > li {
   margin-right: 20px;
   transition: all 2s ease;
 }
-nav .container > ul > li:hover > ul, nav .container > ul > li:focus-within > ul, nav .container > ul > li .dropdown-menu:hover {
+nav .container > ul > li:hover > ul, nav .container > ul > li:focus-within > ul, nav .container > ul > li.dropdown__list:hover .dropdown {
   display: block;
 }
-nav .container > ul > li.dropdown-menu {
+nav .container > ul > li.dropdown__list {
   position: relative;
+  z-index: 30;
 }
-nav .container > ul > li.dropdown-menu:hover .dropdown {
-  display: block;
-}
-nav .container > ul > li.dropdown-menu .dropdown {
+nav .container > ul > li.dropdown__list .dropdown {
   display: none;
   position: absolute;
 }
-nav .container > ul > li.dropdown-menu .dropdown li {
+nav .container > ul > li.dropdown__list .dropdown li {
   display: block;
   width: 220px;
   background-color: rgba(0, 0, 0, 0.71);
 }
-nav .container > ul > li.dropdown-menu .dropdown li:first-child {
+nav .container > ul > li.dropdown__list .dropdown li:first-child {
   margin-top: 1px;
 }
-nav .container > ul > li.dropdown-menu .dropdown li:hover {
-  background-color: red;
+nav .container > ul > li.dropdown__list .dropdown li:hover {
+  background-color: var(--red);
 }
-nav .container > ul > li.dropdown-menu .dropdown li:hover a {
+nav .container > ul > li.dropdown__list .dropdown li:hover a {
   color: #000;
 }
-nav .container > ul > li.dropdown-menu .dropdown li:hover:after {
+nav .container > ul > li.dropdown__list .dropdown li:hover:after {
   content: "";
   position: absolute;
   margin-top: -51px;
@@ -53,27 +81,83 @@ nav .container > ul > li.dropdown-menu .dropdown li:hover:after {
   width: 0;
   height: 0;
   border-top: 26px solid transparent;
-  border-left: 30px solid red;
+  border-left: 30px solid var(--red);
   border-bottom: 26px solid transparent;
 }
-nav .container > ul > li a {
+nav .container > ul > li a, nav .container > ul > li .dropdown__title {
   display: block;
   font-size: 18px;
   font-weight: bold;
   color: #fff;
   padding: 16px 12px;
 }
-nav .container > ul > li a > span {
+nav .container > ul > li a > span, nav .container > ul > li .dropdown__title > span {
   font-size: 12px;
 }
-nav .container > ul > li a.active {
-  color: #EF0000;
+nav .container > ul > li a.active, nav .container > ul > li .dropdown__title.active {
+  color: var(--red-active);
 }
-nav .container > ul > li a:hover {
-  color: #d05f1a;
+nav .container > ul > li a:hover, nav .container > ul > li .dropdown__title:hover {
+  color: var(--orange);
 }
 nav .container a .logo {
   height: 50px;
+  transition: all 1s ease;
+}
+nav .container a :hover {
+  transform: translateX(100%);
+}
+
+@media (max-width: 860px) {
+  nav .container #hamburger__checkbox {
+    display: block;
+    position: relative;
+    z-index: 20;
+    opacity: 0.2;
+    margin-left: 30px;
+    transform: scale(3);
+  }
+  nav .container #hamburger__checkbox:checked ~ ul {
+    display: block;
+    height: 100vh;
+    width: 220px;
+    margin-left: 20px;
+  }
+  nav .container #hamburger__checkbox:checked ~ ul .dropdown {
+    position: relative;
+  }
+  nav .container #hamburger__checkbox:checked ~ .logo__link {
+    visibility: hidden;
+  }
+  nav .container .hamburger__block {
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    position: absolute;
+    left: 18px;
+    top: 12px;
+  }
+  nav .container .hamburger__block span {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 5px;
+    width: 35px;
+    border-radius: 2px;
+    transition: 1s all ease;
+    background-color: var(--orange);
+  }
+  nav .container .hamburger__block span:nth-last-child(2) {
+    top: 16px;
+  }
+  nav .container .hamburger__block span:nth-last-child(3) {
+    top: 32px;
+  }
+  nav .container > ul {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=navigation.css.map */

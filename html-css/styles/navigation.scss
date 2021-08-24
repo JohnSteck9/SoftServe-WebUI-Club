@@ -1,3 +1,28 @@
+/* Double-sized Checkboxes */
+//-ms-transform: scale(2.5); /* IE */
+//-moz-transform: scale(2); /* FF */
+//-webkit-transform: scale(2); /* Safari and Chrome */
+//-o-transform: scale(2); /* Opera */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+:root {
+  --orange: #d05f1a;
+  --red: red;
+  --red-active: #EF0000;
+}
+
+
 nav {
   width: 100%;
   position: fixed;
@@ -8,6 +33,19 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    position: relative;
+
+    #hamburger__checkbox_label {
+      position: absolute;
+    }
+
+    #hamburger__checkbox {
+      display: none;
+    }
+
+    .hamburger__block {
+      display: none;
+    }
 
     > ul {
       display: flex;
@@ -20,23 +58,19 @@ nav {
 
         &:hover > ul,
         &:focus-within > ul,
-        & .dropdown-menu:hover {
+        &.dropdown__list:hover .dropdown {
           display: block;
         }
 
-        &.dropdown-menu {
+        &.dropdown__list {
           position: relative;
-
-          &:hover .dropdown {
-            display: block;
-          }
+          z-index: 30;
 
           .dropdown {
             display: none;
             position: absolute;
 
             li {
-
               display: block;
               width: 220px;
               background-color: rgba(0, 0, 0, 0.71);
@@ -46,7 +80,7 @@ nav {
               }
 
               &:hover {
-                background-color: red;
+                background-color: var(--red);
 
                 a {
                   color: #000;
@@ -60,7 +94,7 @@ nav {
                   width: 0;
                   height: 0;
                   border-top: 26px solid transparent;
-                  border-left: 30px solid red;
+                  border-left: 30px solid var(--red);
                   border-bottom: 26px solid transparent;
                 }
               }
@@ -68,7 +102,7 @@ nav {
           }
         }
 
-        a {
+        a, .dropdown__title {
           display: block;
           font-size: 18px;
           font-weight: bold;
@@ -80,11 +114,11 @@ nav {
           }
 
           &.active {
-            color: #EF0000;
+            color: var(--red-active);
           }
 
           &:hover {
-            color: #d05f1a;
+            color: var(--orange);
           }
         }
       }
@@ -93,7 +127,105 @@ nav {
     a {
       .logo {
         height: 50px;
+        transition: all 1s ease;
+      }
+
+      :hover {
+        transform: translateX(100%);
+
+        //transform: rotate(90deg);
+        //padding-top: 50px;
       }
     }
   }
+}
+
+@media (max-width: 860px) {
+  nav {
+    .container {
+      #hamburger__checkbox {
+        display: block;
+        position: relative;
+        z-index: 20;
+        opacity: 0.2;
+        margin-left: 30px;
+        transform: scale(3);
+
+        &:checked {
+          & ~ ul {
+            display: block;
+            height: 100vh;
+            width: 220px;
+            margin-left: 20px;
+
+            .dropdown {
+              position: relative;
+            }
+          }
+
+          & ~ .logo__link {
+            visibility: hidden;
+          }
+        }
+      }
+
+      .hamburger__block {
+        display: inline-block;
+        height: 35px;
+        width: 35px;
+        //background-color: #b3d4fc;
+        position: absolute;
+        left: 18px;
+        top: 12px;
+
+        span {
+          z-index: 10;
+          position: absolute;
+          top: 0;
+          left: 0;
+          //margin-bottom: 6px;
+          display: block;
+          height: 5px;
+          width: 35px;
+          border-radius: 2px;
+          transition: 1s all ease;
+          background-color: var(--orange);;
+
+          &:nth-last-child(2) {
+            top: 16px;
+          }
+
+          &:nth-last-child(3) {
+            top: 32px;
+          }
+        }
+      }
+
+      > ul {
+        display: none;
+
+        > li {
+          &.dropdown__list {
+            .dropdown {
+              li {
+
+              }
+            }
+          }
+
+          a, .dropdown__title {
+            > span {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
 }

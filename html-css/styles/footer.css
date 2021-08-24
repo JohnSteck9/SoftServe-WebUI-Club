@@ -13,7 +13,11 @@ footer p {
   display: inline-block;
 }
 footer a .logo {
+  transition: all 1s ease;
   height: 50px;
+}
+footer a :hover {
+  transform: translateX(100%);
 }
 
 /*# sourceMappingURL=footer.css.map */
