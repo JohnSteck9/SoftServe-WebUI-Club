@@ -3,6 +3,12 @@ header {
   height: 100vh;
   color: #fff;
 }
+header h1 {
+  transition: all 1s ease;
+}
+header h1:hover {
+  transform: scale(1.1);
+}
 header h3 {
   padding-top: 260px;
 }

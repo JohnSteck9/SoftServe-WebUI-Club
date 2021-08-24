@@ -34,7 +34,12 @@ header {
   //    width: 100%;
   //  }
   //}
-h1 {}
+h1 {
+  transition: all 1s ease;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
 
   h3 {
     padding-top: 260px;
