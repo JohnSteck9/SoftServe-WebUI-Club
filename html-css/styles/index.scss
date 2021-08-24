@@ -6,36 +6,34 @@ header {
   height: 100vh;
   color: #fff;
 
-
-  .text-fill {
-    background-color: #ccc;
-    text-transform: uppercase;
-    position: relative;
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-
-
-    &:before {
-      content: attr(data-title);
-      background: linear-gradient(#9f40b6, #3a3ad3);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 0;
-      transition: all 1s ease;
-      color: transparent;
-      -webkit-background-clip: text;
-      -o-background-clip: text;
-      background-clip: text;
-    }
-
-    &:hover:before {
-      width: 100%;
-    }
-  }
+  //.text-fill {
+  //  background-color: #ccc;
+  //  text-transform: uppercase;
+  //  position: relative;
+  //  color: transparent;
+  //  background-clip: text;
+  //  -webkit-background-clip: text;
+  //
+  //  &:before {
+  //    content: attr(data-title);
+  //    background: linear-gradient(#9f40b6, #3a3ad3);
+  //    position: absolute;
+  //    top: 0;
+  //    bottom: 0;
+  //    left: 0;
+  //    right: 0;
+  //    width: 0;
+  //    transition: all 1s ease;
+  //    color: transparent;
+  //    -webkit-background-clip: text;
+  //    -o-background-clip: text;
+  //    background-clip: text;
+  //  }
+  //
+  //  &:hover:before {
+  //    width: 100%;
+  //  }
+  //}
 h1 {}
 
   h3 {

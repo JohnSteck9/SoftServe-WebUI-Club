@@ -113,7 +113,7 @@ nav .container a :hover {
     display: block;
     position: relative;
     z-index: 20;
-    opacity: 0.2;
+    opacity: 0;
     margin-left: 30px;
     transform: scale(3);
   }
