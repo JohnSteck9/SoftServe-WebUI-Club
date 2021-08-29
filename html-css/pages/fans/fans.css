@@ -36,12 +36,14 @@ section.send-comment form label textarea {
   resize: none;
   padding: 8px;
 }
-section.send-comment form label input {
+section.send-comment form label button {
   background-color: #d05f1a;
   border-radius: 4px;
   padding: 10px 34px;
   border: 1px solid black;
   margin-left: 20px;
+  color: black;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -50,7 +52,7 @@ section.send-comment form label input {
     align-items: stretch;
     flex-direction: column;
   }
-  article.send-comment form label input {
+  article.send-comment form label button {
     margin: 20px;
   }
 }

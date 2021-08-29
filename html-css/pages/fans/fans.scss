@@ -47,12 +47,14 @@ section.send-comment {
         padding: 8px;
       }
 
-      input {
+      button {
         background-color: #d05f1a;
         border-radius: 4px;
         padding: 10px 34px;
         border: 1px solid black;
         margin-left: 20px;
+        color: black;
+        font-weight: bold;
       }
     }
   }
@@ -66,7 +68,7 @@ section.send-comment {
     align-items: stretch;
     flex-direction: column;
 
-    input {
+    button {
       margin: 20px;
     }
   }
