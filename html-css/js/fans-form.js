@@ -35,15 +35,19 @@ btnSend.addEventListener('click', (e) => {
 
 
 function formatDate(date) {
-    let dd = date.getDate();
-    if (dd < 10) dd = '0' + dd;
+    let dd = date.getDate()
+    if (dd < 10) dd = '0' + dd
 
-    let mm = date.getMonth() + 1;
-    if (mm < 10) mm = '0' + mm;
+    let mm = date.getMonth() + 1
+    if (mm < 10) mm = '0' + mm
 
     let yyyy = date.getFullYear()
+
     let hour = date.getHours()
+    if (hour < 10) hour = '0' + hour
+
     let minute = date.getMinutes()
+    if (minute < 10) minute = '0' + minute
 
     return dd + '.' + mm + '.' + yyyy + ' ' + hour + ':' + minute
 }
