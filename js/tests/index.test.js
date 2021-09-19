@@ -1,7 +1,7 @@
 const {firstNumber, multiplicity} = require('./index');
 
 
- // 86.б)Дано натуральне число n. Знайти першу цифру числа n.
+ // 86.б) Дано натуральне число n. Знайти першу цифру числа n.
 describe('firstNumber', () =>{
     test('return first number of number =)', () => {
         expect(firstNumber(1)).toBe(1);
