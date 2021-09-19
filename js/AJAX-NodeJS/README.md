@@ -10,5 +10,3 @@
 
 1. Go to folder 'frontend'
 2. Open 'index.html'
-
-### [DEMO Frontend](https://johnsteck9.github.io/SoftServe-WebUI-Club/js/AJAX-NodeJS/frontend/index.html)
