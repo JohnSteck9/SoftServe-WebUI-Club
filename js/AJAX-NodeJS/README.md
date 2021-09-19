@@ -4,7 +4,7 @@
 
 1. Go to folder 'backend';
 2. Run 'npm install';
-3. Run 'npm start'
+3. Run 'node server.js'
 
 ## Frontend
 
